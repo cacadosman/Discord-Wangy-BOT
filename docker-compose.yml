@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     volumes:
       - "./logs:./logs"
-      - ".env:.env"
+      - "./.env:./.env"
     networks:
       - wangy-network
       
