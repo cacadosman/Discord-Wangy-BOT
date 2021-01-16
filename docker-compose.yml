@@ -4,8 +4,8 @@ services:
     build: .
     restart: unless-stopped
     volumes:
-      - "./logs:./logs"
-      - "./.env:./.env"
+      - "./logs:/app/logs"
+      - "./.env:/app/.env"
     networks:
       - wangy-network
       
