@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  wangy:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - logs/:logs/
+      - .env:.env
+    networks:
+      - wangy-network
+      
+networks:
+  wangy-network:
+    driver: overlay
+    attachable: true
